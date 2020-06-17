@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sample Pop Up View Controller-->
+        <scene sceneID="qFK-1f-Ohf">
+            <objects>
+                <viewController storyboardIdentifier="SamplePopUp" id="542-UW-Ct0" customClass="SamplePopUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zuv-d6-iqk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZd-yK-S2V" userLabel="CloseButton">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="542-UW-Ct0" eventType="touchUpInside" id="2v1-d2-N4s"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeL-iK-j1Z">
+                                <rect key="frame" x="12" y="373" width="390" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gY0-JR-PNf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u0C-iI-rya" firstAttribute="trailing" secondItem="vZd-yK-S2V" secondAttribute="trailing" id="BOZ-0J-p7U"/>
+                            <constraint firstItem="BeL-iK-j1Z" firstAttribute="centerX" secondItem="Zuv-d6-iqk" secondAttribute="centerX" id="Lo0-Br-rco"/>
+                            <constraint firstItem="BeL-iK-j1Z" firstAttribute="centerY" secondItem="Zuv-d6-iqk" secondAttribute="centerY" id="Pgs-4p-bBC"/>
+                            <constraint firstItem="u0C-iI-rya" firstAttribute="trailing" secondItem="BeL-iK-j1Z" secondAttribute="trailing" constant="12" id="ca0-LP-L3g"/>
+                            <constraint firstItem="vZd-yK-S2V" firstAttribute="leading" secondItem="u0C-iI-rya" secondAttribute="leading" id="fSH-2t-8gg"/>
+                            <constraint firstItem="BeL-iK-j1Z" firstAttribute="leading" secondItem="u0C-iI-rya" secondAttribute="leading" constant="12" id="hXj-pH-qi9"/>
+                            <constraint firstItem="u0C-iI-rya" firstAttribute="bottom" secondItem="vZd-yK-S2V" secondAttribute="bottom" id="nom-9h-ljV"/>
+                            <constraint firstItem="vZd-yK-S2V" firstAttribute="top" secondItem="u0C-iI-rya" secondAttribute="top" id="wKD-7a-Fw3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u0C-iI-rya"/>
+                    </view>
+                    <connections>
+                        <outlet property="popview" destination="BeL-iK-j1Z" id="9US-N2-o8Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K16-1J-evf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="156"/>
+        </scene>
+    </scenes>
+</document>
